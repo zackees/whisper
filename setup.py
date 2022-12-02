@@ -16,6 +16,13 @@ requirements = []
 if sys.platform.startswith("linux") and platform.machine() == "x86_64":
     requirements.append("triton==2.0.0")
 
+# The directory containing this file
+HERE = os.path.dirname(__file__)
+# The text of the README file
+with open(os.path.join(HERE, "README.md"), encoding="utf-8", mode="r") as fd:
+    README = fd.read()
+
+
 setup(
     name="whisper",
     py_modules=["whisper"],
