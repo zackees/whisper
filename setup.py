@@ -11,12 +11,10 @@ with open(os.path.join(HERE, "README.md"), encoding="utf-8", mode="r") as fd:
 
 
 setup(
-    name="whisper.ai",
+    name="whisper",
     py_modules=["whisper"],
-    version="1.0.0.1",
+    version="1.0",
     description="Robust Speech Recognition via Large-Scale Weak Supervision",
-    long_description=README,
-    long_description_content_type="text/markdown",
     readme="README.md",
     python_requires=">=3.7",
     author="OpenAI",
@@ -29,9 +27,9 @@ setup(
             open(os.path.join(os.path.dirname(__file__), "requirements.txt"))
         )
     ],
-    entry_points = {
-        'console_scripts': ['whisper=whisper.transcribe:cli'],
+    entry_points={
+        "console_scripts": ["whisper=whisper.transcribe:cli"],
     },
     include_package_data=True,
-    extras_require={'dev': ['pytest']},
+    extras_require={"dev": ["pytest"]},
 )
