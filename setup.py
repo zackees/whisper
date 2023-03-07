@@ -35,7 +35,7 @@ setup(
     version="1.0",
     description="Robust Speech Recognition via Large-Scale Weak Supervision",
     readme="README.md",
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     author="OpenAI",
     url="https://github.com/openai/whisper",
     license="MIT",
